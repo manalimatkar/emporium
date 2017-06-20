@@ -7,7 +7,7 @@ $(document).ready(function() {
     // Get data from JSON
 
     var getSpaceShipList = function() {
-            var apiUrl = "http://demo7475333.mockable.io/spaceships";
+            var apiUrl = "https://demo7475333.mockable.io/spaceships";
             $.ajax({ url: apiUrl, method: 'GET' }).done(function(response) {
                 var imgNum;
                 spaceships = response.products;
