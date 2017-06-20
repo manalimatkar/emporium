@@ -7,13 +7,24 @@
  }
  
  p {
-     margin: 30px;
+     margin: 5px;
+     font-size: 18px;
+ }
+  .header{
+     color:#fff;
+     text-align:center;
+     padding:20px 30px;
+     text-align: center;
+     font: 40px "Lato", sans-serif;
+     letter-spacing: 10px
+
+
  }
  /*Content with white background*/
  
  .whiteBg {
      color: #777;
-     background-color: white;
+     /*background-color: white;*/
      text-align: center;
      padding: 50px 80px;
      text-align: justify;
@@ -32,7 +43,7 @@
  }
  
  .bgimg-1 {
-     background-image: url("../../assets/img/bg/bg_four.jpg");
+     background-image: url("../../assets/img/bg/bg_six.jpg");
      min-height: 100%;
  }
  
@@ -45,7 +56,7 @@
      background-image: url("../../assets/img/bg/bg_three.png");
      min-height: 400px;
  }
- 
+
  .caption {
      position: absolute;
      left: 0;
@@ -60,20 +71,24 @@
      color: #fff;
      padding: 18px;
      font-size: 25px;
-     letter-spacing: 10px;
+     letter-spacing: 5px;
  }
  
  h1,
- h3 {
-     letter-spacing: 5px;
+ h3,h4 {
+     letter-spacing: 2px;
      text-transform: uppercase;
-     font: 20px "Lato", sans-serif;
+     font: 15px "Lato", sans-serif;
      color: #111;
+     margin-top: 10px;
      text-align: center;
  }
  
  h1 {
      font-size: 40px;
+     color: #fff;
+     background-color: #111;
+
  }
  /* Turn off parallax scrolling for tablets and phones */
  
@@ -98,4 +113,6 @@
  }
  .img-center{
      margin: 0 auto;
+     border: 1px solid grey;
+     background-color: #eeefea;
  }

@@ -20,11 +20,32 @@ var getSpaceShipList = function(){
        			 		spaceships[i].imgIconSrc = imgIconSrc;
        			 		spaceships[i].imgSrc = imgSrc;
        			 		spaceships[i].id = imgNum;
-       			 		console.log(spaceships[i]);
+       			 		// console.log(spaceships[i]);
        			 	}
+       			 	displayResultsGrid();
         		 });
 
 }// getSpaceShipList Ends
 getSpaceShipList();
-// Display results from
+// Display results 
+var displayResultsGrid = function(){
+	console.log(spaceships);
+
+	for (var i = 0; i < spaceships.length; i++) {		
+	// Container div
+	var containerDiv = $("<div class='col-md-4 col-sm-6 img-portfolio'>");
+	// Grid Image Icon
+	var imgTag = $("<img class='img-responsive img-hover img-center'>");
+	imgTag.attr("src", spaceships[i].imgIconSrc);	
+	// Append Img to container div
+	containerDiv.append(imgTag);
+	// Ship Name
+	containerDiv.append("<p class='text-center'><a href='#'><strong>" + spaceships[i].name + "</strong></a></p>");
+	// Ship Class 
+	containerDiv.append("<h4>" + spaceships[i].class + "</h4>");
+	
+	$("#spaceshipsDisplayGrid").append(containerDiv);
+}
+	
+}
 }); //Document Ready Ends
