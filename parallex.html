@@ -16,22 +16,21 @@
 </head>
 
 <body>
-
-
   <div class="bgimg-1">
      <div class="header">
-  Welcome to Watto's Space Emporium
+      Welcome to Watto's Space Emporium
     </div>
     <div class="animated slideInRight">
       <img src="assets/img/Watto.png" class="img-responsive" alt="Watto's Character">
     </div>
     <div class="caption animated slideInLeft">
-      <a href="#spaceshipsDisplayGrid"><span class="border">SCROLL DOWN</span></a>
+      <a href="#collection"><span class="border">SCROLL DOWN</span></a>
     </div>
   </div>
-  <div class="whiteBg">
+  <div class="whiteBg" id="collection">
     <!-- Projects Row -->
     <div class="row">
+      <h1>Watto's Spaceship Collection</span> </h1>
       <div class="col-sm-12" id="spaceshipsDisplayGrid">
       </div>
     </div>
@@ -44,9 +43,49 @@
   </div>
   <div style="position:relative;">
     <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-      <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+       <div class="row">
+                <div class="col-md-12 text-center">
+                    <h5>Manali Matkar</h5></div>
+            </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div class="container">
+                <div id="detailView" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title" id="modalTitle"></h4>
+                            </div>
+                            <div class="modal-body col-md-12">
+                             
+                               <!-- Portfolio Item Row -->
+        <div class="row">
+            <div class="col-md-12 col-sm-12" id="shipName">
+           
+            </div>
+            <div class="col-md-6" id="shipImage">
+              
+            </div>
+
+            <div class="col-md-6" id="shipDetails">
+                <h3>Technical Specifications: </h3>
+                <ul class="list-group" id="techSpec">
+                  
+                </ul>
+            </div>
+
+        </div>
+        <!-- /.row -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
   <script src="assets/js/app.js"></script>
 </body>
 

@@ -16,7 +16,7 @@
      padding:20px 30px;
      text-align: center;
      font: 40px "Lato", sans-serif;
-     letter-spacing: 10px
+     letter-spacing: 10px;
 
 
  }
@@ -24,7 +24,6 @@
  
  .whiteBg {
      color: #777;
-     /*background-color: white;*/
      text-align: center;
      padding: 50px 80px;
      text-align: justify;
@@ -47,7 +46,7 @@
      min-height: 100%;
  }
  
- .bgimg-2 {
+ .bgimg-2, {
      background-image: url("../../assets/img/bg/bg_four.jpg");
      min-height: 400px;
  }
@@ -74,21 +73,31 @@
      letter-spacing: 5px;
  }
  
- h1,
+ h1,h2,
  h3,h4 {
      letter-spacing: 2px;
      text-transform: uppercase;
-     font: 15px "Lato", sans-serif;
+     font: 18px "Lato", sans-serif;
      color: #111;
      margin-top: 10px;
+     margin-bottom: 10px;
      text-align: center;
+ }
+ h4{
+     font-size:15px;
  }
  
  h1 {
      font-size: 40px;
-     color: #fff;
-     background-color: #111;
-
+     padding: 20px;
+     margin-bottom: 40px;
+     border: 1px solid #111;
+ }
+ h2{
+     font-size: 25px;
+     padding: 10px;
+     margin-bottom: 40px;
+     border: 1px solid #111; 
  }
  /* Turn off parallax scrolling for tablets and phones */
  
@@ -116,3 +125,33 @@
      border: 1px solid grey;
      background-color: #eeefea;
  }
+ .img-side{
+     margin: 0 auto;
+     margin-top: 40px;
+     border: 1px solid grey;
+     background-color: #eeefea;
+ }
+ /*Modal Styles*/
+ .modal-dialog {
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+
+}
+.modal-content {
+    height: 100%;
+    min-height: 100%;
+    height: auto;
+    border-radius: 0;
+
+}
+/*list item*/
+.list-group .list-group-item{
+     padding-bottom: 2px;
+     box-shadow: none;
+}
+.label-text{
+      text-transform: uppercase;
+      font-weight: bold;
+}
