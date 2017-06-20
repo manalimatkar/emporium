@@ -42,7 +42,7 @@
  
  .bgimg-1 {
      background-image: url("../../assets/img/bg/bg_six.jpg");
-     min-height: 100%;
+     min-height: 400px;
  }
  
  .bgimg-2,
@@ -63,6 +63,7 @@
      width: 100%;
      text-align: center;
      color: #000;
+     text-decoration: none;
  }
  
  .caption span.border {
@@ -72,7 +73,15 @@
      font-size: 25px;
      letter-spacing: 5px;
  }
- 
+#shopingCart{
+     position: absolute;
+     font-size: 30px;
+     left: 0;
+     top: 60%;
+     width: 100%;
+     text-align: center;
+     color: #fff;
+} 
  h1,
  h2,
  h3,

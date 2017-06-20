@@ -2,6 +2,7 @@
 // GLOBAL VARIABLES
 // ================================================================================================== //
 var spaceships = [];
+var myCart = [];
 
 $(document).ready(function() {
     // Get data from JSON
@@ -60,10 +61,19 @@ $(document).ready(function() {
         // Get current user data and populate modal 
         populateModal(selectedShip);
     });
+    $(document).on("click", "#addToCart", function(){
+    	var itemPurchased = $("#addToCart").attr("data-item");
+    	
+    	myCart.push(spaceships[itemPurchased]);
+    	console.log(myCart);
+    	$("#detailView").modal('toggle');
+    	$("#shopingCart").text("Items Purchased : " + myCart.length);
+
+    });
 
     // Bind clicked selectedShip data to modal
     var populateModal = function(selectedShip) {
-
+    	$("#addToCart").attr("data-item", selectedShip);
         // Name
         var shipClass = spaceships[selectedShip].class;
         var shipImgSrc = spaceships[selectedShip].imgProfile;
