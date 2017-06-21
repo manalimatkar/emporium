@@ -1,0 +1,119 @@
+ /* Remove the navbar's default rounded borders and increase the bottom margin */
+ 
+ body,
+ html {
+     font: 400 15px/1.8 "Lato", sans-serif;
+     /*color: #777;*/
+ }
+ h1,
+ h2,
+ h3,
+ h4 {
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     font: 18px "Lato", sans-serif;
+     color: #111;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     text-align: center;
+ }
+ 
+ h4 {
+     font-size: 15px;
+ }
+ 
+ h1 {
+     font-size: 40px;
+     padding: 20px;
+     margin-bottom: 40px;
+     /*border: 1px solid #111;*/
+ }
+ 
+ h2 {
+     font-size: 25px;
+     padding: 10px;
+     margin-bottom: 40px;
+     border: 1px solid #111;
+ }
+ 
+ .navbar {
+     margin-bottom: 50px;
+     border-radius: 0;
+ }
+ /* Remove the jumbotron's default bottom margin */
+ 
+ .jumbotron {
+     margin-bottom: 0;
+     background-image: url("../../assets/img/bg/bg_four.jpg");
+     color: #fffff;
+ }
+ 
+ .jumbotron h1,
+ p {
+     color: white;
+ }
+ 
+ .watto {
+     width: 15%;
+     height: 15%;
+ }
+ 
+ #shopingCart {
+     font-size: 12px;
+     background: white;
+     color: #111;
+     padding: 2px 5px;
+     vertical-align: top;
+ }
+ #itemAdded{
+  width: 60%;
+  margin: 10px auto;
+ }
+ 
+ .img-center {
+     margin: 0 auto;
+     border: 1px solid #eeefea;
+     background-color: #eeefea;
+ }
+ .img-center:hover {
+     opacity: 0.9;
+     -moz-transform: scale(1.1);
+     transition: 0.9s;
+     -webkit-transform: scale(1.1);
+     transform: scale(1.1);
+ }
+  .img-side {
+     margin: 0 auto;
+     margin-top: 40px;
+     border: 1px solid grey;
+     background-color: #eeefea;
+ }
+.modal-dialog {
+     width: 80%;
+     height: auto;
+     padding: 0;
+     margin: 0 auto;
+ }
+ 
+ .modal-content {
+     height: 100%;
+     min-height: 100%;
+     height: auto;
+     border-radius: 0;
+ }
+ .list-group .list-group-item {
+     padding-bottom: 2px;
+     box-shadow: none;
+ }
+ 
+ .label-text {
+     text-transform: uppercase;
+     font-weight: bold;
+ }
+
+ /* Add a gray background color and some padding to the footer */
+ 
+ footer {
+     background-color: #f2f2f2;
+     padding: 25px;
+ }

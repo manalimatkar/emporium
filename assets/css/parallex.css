@@ -103,7 +103,7 @@
      font-size: 40px;
      padding: 20px;
      margin-bottom: 40px;
-     border: 1px solid #111;
+     /*border: 1px solid #111;*/
  }
  
  h2 {
@@ -128,8 +128,8 @@
  
  .img-hover:hover {
      opacity: 0.9;
-     transition: 0.9s;
      -moz-transform: scale(1.1);
+     transition: 0.9s;
      -webkit-transform: scale(1.1);
      transform: scale(1.1);
  }
