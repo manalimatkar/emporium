@@ -37,7 +37,7 @@ $(document).ready(function() {
 
             for (var i = 0; i < spaceships.length; i++) {
                 // Container div
-                var containerDiv = $("<div class='col-md-4 col-sm-6 img-portfolio' data-toggle='modal' data-target='#detailView'>");
+                var containerDiv = $("<div class='col-md-4 col-sm-6 col-xs-12 img-portfolio' data-toggle='modal' data-target='#detailView'>");
                 containerDiv.attr('data-index', i);
                 // Create Panel
                 var containerPanel = $("<div class='panel panel-primary'>");
