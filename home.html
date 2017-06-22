@@ -10,17 +10,14 @@
   <!--custon and other css-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="assets/css/home.css">
-  <style>
-   
-  </style>
 </head>
 <body>
 
 <div class="jumbotron">
   <div class="container text-center">
-   <img src="assets/img/Watto.png" class="img-responsive pull-left watto animated flash" alt="Watto's Character">
-    <h1 class="animated flash"> Welcome to Watto's Space Emporium </h1>      
-    <p class="animated flash">"Mind tricks don't work on me, only money!!"
+   <img src="assets/img/Watto.png" class="img-responsive pull-left watto animated bounceInLeft" alt="Watto's Character">
+    <h1 class="animated rotateIn"> Welcome to Watto's Space Emporium </h1>      
+    <p class="animated swing">"Mind tricks don't work on me, only money!!"
     </p>
   </div>
 </div>
@@ -38,12 +35,12 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="home.html">Home</a></li>
-        <li><a href="#collection">Products</a></li>
+        <li><a href="#spaceshipsDisplayGrid">Products</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge" id="shopingCart"></span> Shopping Cart</a></li>
+        <li><a href="#myCart" id="cartLink"><span class="glyphicon glyphicon-shopping-cart"></span><span class="badge" id="shopingCart"></span> Shopping Cart</a></li>
       </ul>
     </div>
   </div>
@@ -57,7 +54,13 @@
 <h1>Watto's Spaceship Collection</h1>    
   <div class="row">
    <div class="col-sm-12" id="spaceshipsDisplayGrid">
-      </div>
+   </div>
+</div><br>
+<div class="container">
+<h1>My Shopping Cart</h1>    
+  <div class="row">
+   <div class="col-sm-12" id="myCart">
+   </div>
 </div><br>
 <footer class="container-fluid text-center" id="contact">
   <h4>Online Store Copyright</h4>  
@@ -66,6 +69,7 @@
     <button type="button" class="btn btn-danger">Sign Up</button>
   </form>
 </footer>
+<button id="myBtnTop" title="Go to top">Top</button>
 <!-- Modal -->
   <div class="container">
     <div id="detailView" class="modal fade" role="dialog">

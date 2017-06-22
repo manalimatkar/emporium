@@ -1,5 +1,5 @@
-$(document).ready(function(){
-	  // Code to enable smooth scroll 
+$(document).ready(function() {
+    // Code to enable smooth scroll 
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
@@ -35,5 +35,23 @@ $(document).ready(function(){
                 }
             }
         });
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtnTop").style.display = "block";
+        } else {
+            document.getElementById("myBtnTop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    $(document).on("click", "#myBtnTop", function() {
+        // document.body.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
+        $('html, body').animate({scrollTop: 0}, 500, 'linear');
+    });
 
 });
