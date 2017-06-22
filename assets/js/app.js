@@ -6,9 +6,10 @@ var myCart = [];
 
 $(document).ready(function() {
     // Hide alert
-    $('#itemAdded').hide();
+    $('#alertMessage').hide();
 
-     //Get Json data  
+
+    //Get Json data  
     var getSpaceShipList = function() {
             var apiUrl = "https://demo7475333.mockable.io/spaceships";
             $.ajax({ url: apiUrl, method: 'GET' }).done(function(response) {
@@ -32,7 +33,7 @@ $(document).ready(function() {
             });
 
         } // getSpaceShipList Ends
-    // Get data from JSON
+        // Get data from JSON
     getSpaceShipList();
 
     // Handle click on the grid image and bind data to popup modal
@@ -52,7 +53,7 @@ $(document).ready(function() {
         // Push selected item to myCart array.
         myCart.push(spaceships[itemPurchased]);
         // console.log(myCart);
-        
+
         // close modal
         $("#detailView").modal('toggle');
         // update item count in shopping cart icon
@@ -60,9 +61,10 @@ $(document).ready(function() {
         // scroll to link location
         $(window).scrollTop($('#shopingCart'));
         // show success alert
-        $("#itemAdded").show();
-        // focus on shoping cart link
-        $("#shopingCart").focus();
+        $("#alertMessage").addClass("alert-success");
+        $("#alertMessage").html("<a href='#'' class='close' aria-label='close'>&times;</a><strong>Order Placed !</strong> Continue Shopping!!");
+        $("#alertMessage").show();
+        $('html, body').animate({ scrollTop: 100 }, 500, 'linear');
     });
     // Handle click on link for Shopping cart
     $(document).on("click", "#cartLink", function() {
@@ -75,21 +77,46 @@ $(document).ready(function() {
             displayShopList();
         } else {
             // Show message that the cart is empty
-            $("#myCart").html("<h3>Your Cart is empty!!! Continue Shopping.</h3>");
+            $("#myCart").html("<a href='#collection' class='btn btn-warning btn-lg'>Your Cart is empty!!! Continue Shopping.</a>");
         }
     });
-    // Handle alert message close button click
-    $('.close').click(function() {
-        $('#itemAdded').hide();
+    $(document).on("click", "#sendMail", function() {
+
+        var email = $.trim($("#email").val());
+        // empty input
+        $("#sendemail").val("");
+        if (email.length > 0) {
+            // empty input
+            $("#sendemail").val("");
+            $("#alertMessage").removeClass("alert-danger");
+            $("#alertMessage").addClass("alert-success");
+            $("#alertMessage").html("<a href='#'' class='close' aria-label='close'>&times;</a><strong>Email Sent!</strong> We will get back to you shortly!");
+
+
+        } else {
+            // Show message that the cart is empty
+            $("#alertMessage").removeClass("alert-success");
+            $("#alertMessage").addClass("alert-danger");
+            $("#alertMessage").html("<a href='#'' class='close' aria-label='close'>&times;</a><strong>Email Failed!</strong> Please try later!");
+
+        }
+        $("#alertMessage").show();
+        $('html, body').animate({ scrollTop: 100 }, 500, 'linear');
+        return false;
     });
-   
+    // Handle alert message close button click
+    $(document).on("click", ".close", function() {
+        console.log(this);
+        $("#alertMessage").hide();
+    });
+
     // Display results 
     var displayResultsGrid = function() {
             console.log(spaceships);
             //For each item object create a div tag
             for (var i = 0; i < spaceships.length; i++) {
                 // Container div
-                var containerDiv = $("<div class='col-md-4 col-sm-6 col-xs-6  img-portfolio' data-toggle='modal' data-target='#detailView'>");
+                var containerDiv = $("<div class='col-md-4 col-sm-6 col-xs-12  img-portfolio' data-toggle='modal' data-target='#detailView'>");
                 containerDiv.attr('data-index', i);
                 // Create Panel
                 var containerPanel = $("<div class='panel panel-primary animated zoomIn'>");
@@ -123,24 +150,26 @@ $(document).ready(function() {
 
     // Display shopping list 
     var displayShopList = function() {
-            // for each item in shopping list
-            for (var i = 0; i < myCart.length; i++) {
-                // create container div
-                var containerDiv = $("<div class='col-md-3 col-sm-6 col-xs-6 well'>");
-                containerDiv.attr('data-index', myCart[i].id - 1);
-                // Grid Image Icon
-                var imgTag = $("<img class='img-responsive img-hover img-small' style='width:100%'' alt='Image'>");
-                imgTag.attr("src", myCart[i].imgIconSrc);
-                // Append Img to container div
-                containerDiv.append(imgTag);
-                // append item name
-                containerDiv.append("<h4>" + myCart[i].name + "</h4>");
-                // append container div to parent div
-                $("#myCart").append(containerDiv);
+        $("#myCart").empty();
+        $("#myCart").append("<h1>My Shopping Cart</h1>");
+        // for each item in shopping list
+        for (var i = 0; i < myCart.length; i++) {
+            // create container div
+            var containerDiv = $("<div class='col-md-3 col-sm-6 col-xs-12 well'>");
+            containerDiv.attr('data-index', myCart[i].id - 1);
+            // Grid Image Icon
+            var imgTag = $("<img class='img-responsive img-hover img-small' style='width:100%'' alt='Image'>");
+            imgTag.attr("src", myCart[i].imgIconSrc);
+            // Append Img to container div
+            containerDiv.append(imgTag);
+            // append item name
+            containerDiv.append("<h4>" + myCart[i].name + "</h4>");
+            // append container div to parent div
+            $("#myCart").append(containerDiv);
 
-            }
         }
-    
+    }
+
     // Bind clicked selectedShip data to modal
     var populateModal = function(selectedShip) {
         $("#addToCart").attr("data-item", selectedShip);

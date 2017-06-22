@@ -54,8 +54,8 @@
  }
  
  .watto {
-     width: 20%;
-     height: 20%;
+     width: 31%;
+     height: 31%;
  }
  
  #shopingCart {
@@ -65,7 +65,7 @@
      padding: 2px 5px;
      vertical-align: top;
  }
- #itemAdded{
+ #alertMessage{
   width: 60%;
   margin: 10px auto;
  }
