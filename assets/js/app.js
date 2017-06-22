@@ -89,7 +89,7 @@ $(document).ready(function() {
             //For each item object create a div tag
             for (var i = 0; i < spaceships.length; i++) {
                 // Container div
-                var containerDiv = $("<div class='col-md-4 col-sm-6 col-xs-12  img-portfolio' data-toggle='modal' data-target='#detailView'>");
+                var containerDiv = $("<div class='col-md-4 col-sm-6 col-xs-6  img-portfolio' data-toggle='modal' data-target='#detailView'>");
                 containerDiv.attr('data-index', i);
                 // Create Panel
                 var containerPanel = $("<div class='panel panel-primary animated zoomIn'>");
@@ -126,7 +126,7 @@ $(document).ready(function() {
             // for each item in shopping list
             for (var i = 0; i < myCart.length; i++) {
                 // create container div
-                var containerDiv = $("<div class='col-md-3 col-sm-6 col-xs-12 well'>");
+                var containerDiv = $("<div class='col-md-3 col-sm-6 col-xs-6 well'>");
                 containerDiv.attr('data-index', myCart[i].id - 1);
                 // Grid Image Icon
                 var imgTag = $("<img class='img-responsive img-hover img-small' style='width:100%'' alt='Image'>");
